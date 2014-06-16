@@ -12,8 +12,8 @@
 
 		// Header (homepage only)
 			header: {
-				fullScreen: true,
-				fadeIn: true,
+				fullScreen: false,
+				fadeIn: false,
 				fadeDelay: 500
 			},
 

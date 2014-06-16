@@ -1,7 +1,9 @@
 @charset 'UTF-8';
 
-@font-face{font-family:'FontAwesome';src:url('font/fontawesome-webfont.eot?v=4.0.1');src:url('font/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),url('font/fontawesome-webfont.woff?v=4.0.1') format('woff'),url('font/fontawesome-webfont.ttf?v=4.0.1') format('truetype'),url('font/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
-
+@font-face {
+    font-family: Lato;
+    src: url('font/lato/Lato-Reg.ttf');
+    }
 /*
 	Helios 1.5 by HTML5 UP
 	html5up.net | @n33co
@@ -25,7 +27,7 @@
 	{
 		background: #f0f4f4;
 		color: #5b5b5b;
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Lato', sans-serif;
 		font-weight: 300;
 	}
 
@@ -1054,7 +1056,7 @@
 	#header
 	{
 		position: relative;
-		background-image: url('../images/header.jpg');
+		background-image: url('../images/triangle2.png');
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -1063,16 +1065,11 @@
 		padding: 2.5em 0 2em 0;
 		cursor: default;
 	}
-
-		.homepage #header
-		{
-			padding: 4em 0 4em 0;
-		}
 	
-			.homepage #header .overlay
+			#header .overlay
 			{
 				content: '';
-				background: #1C0920;
+				background: #FFFFFF;
 				display: block;
 				position: absolute;
 				left: 0;
@@ -1080,14 +1077,14 @@
 				width: 100%;
 				height: 100%;
 				opacity: 1.0;
-				-moz-transition: opacity 2s ease-in-out;
-				-webkit-transition: opacity 2s ease-in-out;
-				-o-transition: opacity 2s ease-in-out;
-				-ms-transition: opacity 2s ease-in-out;
-				transition: opacity 2s ease-in-out;
+				-moz-transition: opacity 1s ease-in-out;
+				-webkit-transition: opacity 1s ease-in-out;
+				-o-transition: opacity 1s ease-in-out;
+				-ms-transition: opacity 1s ease-in-out;
+				transition: opacity 1s ease-in-out;
 			}
 		
-			.homepage #header.ready .overlay
+			#header.ready .overlay
 			{
 				opacity: 0;
 			}
@@ -1107,10 +1104,7 @@
 			line-height: 1em;
 		}
 
-			.homepage #header h1
-			{
-				font-size: 4em;
-			}
+			
 		
 			#header h1 a
 			{
