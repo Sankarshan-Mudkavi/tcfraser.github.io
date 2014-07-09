@@ -47,9 +47,9 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="left-sidebar.html">Browse</a></li>
-							<li><a href="right-sidebar.html">About</a></li>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Browse</a></li>
+							<li><a href="#">About</a></li>
 						</ul>
 					</nav>
 
@@ -63,35 +63,56 @@
 						<div class="12u skel-cell-important" id="content">
 							<article id="main" class="special">
 								<header>
-									<h2><a href="#">No Sidebar</a></h2>
+									<h2><a href="#">Prime Number Shenanigans</a></h2>
 									<span class="byline">
 										Morbi convallis lectus malesuada sed fermentum dolore amet
 									</span>
 								</header>
-								<a href="http://mdomaradzki.deviantart.com/art/Planet-Bronte-339258500" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
+								<section>										
+									<header>
+										<h3>
+											The Objective
+										</h3>
+									</header>								
+								
 								<p>
-									This is an example of inline text. \(\vec{A}=\vec{B}_{x}\). See it works! Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa 
-									posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus 
-									lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum 
-									consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue 
-									interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia 
-									natoque aenean scelerisque vel lacinia mollis quam sodales congue.
+									Design a function such that: 
+									$$
+									f(s) : \mathbb{N} \rightarrow \mathbb{R}\\
+									f(s) = \left\{\begin{aligned}
+									&0 &&: s \in \mathbb{P} \\
+									& \not 0  &&: s \not\in \mathbb{P}
+									\end{aligned}
+									\right.
+									$$
 								</p>
+								<p>
+									Essentially, the function will be zero if and only if \(s\) is prime. The motivation behind this is so that one can check if a given natural number \(s\) is prime or not. Note: this will not be practical for anything. 
+								</p>
+								</section>
 								<section>
 									<header>
-										<h3>Ultrices tempor sagittis nisl</h3>
+										<h3>Methods</h3>
 									</header>
 									<p>
-										Nascetur volutpat nibh ullamcorper vivamus at purus. Cursus ultrices porttitor sollicitudin imperdiet
-										at pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis 
-										feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit 
-										fringilla consequat dis arcu. Pellentesque mus tempor vitae pretium sodales porttitor lacus. Phasellus 
-										egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna. 
+										Let's define a intermediate function \(\alpha_T(s)\) that is equal to zero if \(s\) is qual to a \(T\) or is not a multiple of \(T\) and not equal to \(0\) otherwise. 
 									</p>
 									<p>
-										Eleifend auctor turpis magnis sed porta nisl pretium. Aenean suspendisse nulla eget sed etiam parturient 
-										orci cursus nibh. Quisque eu nec neque felis laoreet diam morbi egestas. Dignissim cras rutrum consectetur 
-										ut penatibus fermentum nibh erat malesuada varius. 
+									$$
+									\alpha_T(s) : \mathbb{R} \rightarrow \mathbb{R}\\
+									\alpha_T(s) = \left\{\begin{aligned}
+									& 0  &&: s = T \\
+									& 0  &&: s \not = 0\mod T \\
+									& \not 0 &&: \text{otherwise}
+									\end{aligned}
+									\right.
+									$$
+									</p>
+									<p>
+										Now by combining these ideas, let's define our function \(f(s)\) as follows.
+										$$
+										f(s) = \sum_{T=2}^{\infty}\alpha_T(s)
+										$$
 									</p>
 								</section>
 								<section>
