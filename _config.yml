@@ -6,7 +6,7 @@ relative_permalinks: true
 title:            Poole
 tagline:          The Jekyll Butler
 url:              http://tcfraser.com
-paginate:         1
+paginate:         2
 baseurl:          /
 author:
   name:           TC Fraser
