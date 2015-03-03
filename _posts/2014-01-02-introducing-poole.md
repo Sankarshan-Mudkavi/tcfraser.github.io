@@ -3,6 +3,12 @@ layout: post
 title: Introducing Poole
 ---
 
+### This is just temporary text I am using to test how jekyll serve --watch works.
+
+I wonder how quickly this can work.
+
+-----
+
 *The Strange Case of Dr. Jekyll and Mr. Hyde* tells the story of a lawyer investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward Hyde. Chief among the novel's supporting cast is a man by the name of Mr. Poole, Dr. Jekyll's loyal butler.
 
 -----
@@ -35,6 +41,6 @@ Poole and it's themes are by preference a forward-thinking project. In addition 
 
 ### Download
 
-Poole is developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/poole">GitHub repository</a> for downloads, bug reports, and features requests.
+Poole is developed on and hosted with GitHub. Head to the [GitHub repository](https://github.com/poole/poole) for downloads, bug reports, and features requests.
 
 Thanks!
