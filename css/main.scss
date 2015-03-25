@@ -14,6 +14,16 @@ $break-size-4: 64em;
 $default-text-color: #515151;
 $theme-color-main: #127684;
 $theme-color-light: #1693A5;
+$side-bar-shadow-depth: 3px;
+$side-bar-shadow-color: rgba(0,0,0,0.3);
+/* ------ */
+
+/* --- Mixins --- */
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow:$top $left $blur $color #{$inset};
+     -moz-box-shadow:$top $left $blur $color #{$inset};
+          box-shadow:$top $left $blur $color #{$inset};
+}
 /* ------ */
 
 /* --- Global Resets --- */
@@ -205,6 +215,7 @@ blockquote p:last-child {
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: $theme-color-main;
+  @include box-shadow(0, $side-bar-shadow-depth, $side-bar-shadow-depth*2, $side-bar-shadow-color);
 }
 @media (min-width: $break-size-2) {
   .sidebar {
@@ -214,6 +225,7 @@ blockquote p:last-child {
     bottom: 0;
     width: 18rem;
     text-align: left;
+    @include box-shadow($side-bar-shadow-depth, 0, $side-bar-shadow-depth*2, $side-bar-shadow-color);
   }
 
   .sidebar-container {
