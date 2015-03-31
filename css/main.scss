@@ -13,9 +13,9 @@ $break-size-3: 58em;
 $break-size-4: 64em;
 $default-text-color: #515151;
 $theme-color-main: #07071d;
-$theme-color-light: #173075;
-$side-bar-shadow-depth: 3px;
-$side-bar-shadow-color: rgba(0,0,0,0.3);
+$theme-color-alt: #2298f3;
+$side-bar-shadow-depth: 5px;
+$side-bar-shadow-color: rgba(0,0,0,0.7);
 /* ------ */
 
 /* --- Mixins --- */
@@ -24,13 +24,21 @@ $side-bar-shadow-color: rgba(0,0,0,0.3);
      -moz-box-shadow:$top $left $blur $color #{$inset};
           box-shadow:$top $left $blur $color #{$inset};
 }
+@mixin border-box(){
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@mixin transform-translate($deltaX,$deltaY) {
+  -webkit-transform: translate($deltaX,$deltaY);
+      -ms-transform: translate($deltaX,$deltaY);
+          transfrom: translate($deltaX,$deltaY);
+}
 /* ------ */
 
 /* --- Global Resets --- */
 * { /* Include padding and border with dimensions of boxes. */
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  @include border-box();
 }
 
 html, body {
@@ -39,7 +47,7 @@ html, body {
 }
 
 html {
-    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 150%;
 }
@@ -75,7 +83,7 @@ body {
 /* -- Links -- */
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: $theme-color-light;
+  color: $theme-color-alt;
   text-decoration: none;
 }
 a strong {
@@ -212,11 +220,15 @@ blockquote p:last-child {
 /* --- Side Bar --- */
 .sidebar {
   text-align: center;
-  padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: $theme-color-main;
   @include box-shadow(0, $side-bar-shadow-depth, $side-bar-shadow-depth*2, $side-bar-shadow-color);
 }
+
+.sidebar-logo-container {
+  display: none;
+}
+
 @media (min-width: $break-size-2) {
   .sidebar {
     position: fixed;
@@ -230,9 +242,31 @@ blockquote p:last-child {
 
   .sidebar-container {
     position: absolute;
+    padding: 2rem 0.5rem;
     right: 1em;
-    bottom: 1em;
+    top: 1em;
     left: 1em;
+  }
+
+  .sidebar-logo-container {
+    width: 100%;
+    height: 16em;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    bottom: 1em;
+    display: block;
+  }
+
+  .sidebar-logo-container img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    margin: 0;
+    max-width: none;
+    @include transform-translate(-50%,-50%);
   }
 }
 
@@ -245,13 +279,15 @@ blockquote p:last-child {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Abril Fatface", serif;
-  font-size: 3.25rem;
+  font-family: "Open Sans", serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 2.5rem;
 }
 
 /* -- Sidebar nav -- */
 .sidebar-nav {
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 .sidebar-nav-item {
   display: block;
@@ -263,6 +299,13 @@ a.sidebar-nav-item:focus {
 }
 .sidebar-nav-item.active {
   font-weight: bold;
+}
+/* -- Sidebar Horizontal Nav -- */
+@media (max-width: $break-size-2) {
+  .sidebar-nav-item {
+    display: inline;
+    padding: 0 1em;
+  }
 }
 /* ------ */
 
@@ -313,7 +356,7 @@ a.sidebar-nav-item:focus {
   color: #999;
 }
 .related-posts li a:hover {
-  color: $theme-color-light;
+  color: $theme-color-alt;
   text-decoration: none;
 }
 .related-posts li a:hover small {
@@ -373,7 +416,7 @@ a.pagination-item:hover {
 }
 
 .content a {
-    color: $theme-color-light;
+    color: $theme-color-alt;
 }
 
 @media (min-width: $break-size-2) {

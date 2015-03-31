@@ -3,7 +3,7 @@
     <div class="sidebar-about">
       <h1>
         <a href="{{ site.baseurl }}">
-          {{ site.title }}
+          {{ site.title}}
         </a>
       </h1>
       <p class="lead">{{ site.description }}</p>
@@ -27,9 +27,9 @@
       {% endfor %}
 
       <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub</a>
-      <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
     </nav>
-
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+  </div>
+  <div class="sidebar-logo-container">
+      <img src="{{ site.baseurl }}images/logo/galaxy_main.png" alt="Low-Poly Galaxy" width="640" height="320">
   </div>
 </div>

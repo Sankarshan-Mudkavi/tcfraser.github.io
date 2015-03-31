@@ -15,9 +15,9 @@
    height="500"
    width="1000"
    sodipodi:docname="galaxy.svg"
-   inkscape:export-filename="T:\Github\tcfraser.github.io\images\galaxy_main.png"
-   inkscape:export-xdpi="36"
-   inkscape:export-ydpi="36">
+   inkscape:export-filename="T:\Github\tcfraser.github.io\images\logo\galaxy_main.png"
+   inkscape:export-xdpi="54"
+   inkscape:export-ydpi="54">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.6"
-     inkscape:cx="396.88305"
-     inkscape:cy="356.80988"
+     inkscape:zoom="1.2"
+     inkscape:cx="529.23231"
+     inkscape:cy="283.84998"
      inkscape:document-units="px"
      inkscape:current-layer="layer4"
      showgrid="true"
@@ -46,7 +46,7 @@
      inkscape:snap-page="true"
      inkscape:window-width="1920"
      inkscape:window-height="1027"
-     inkscape:window-x="-8"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:snap-global="true" />
@@ -56661,11 +56661,10 @@
      id="layer4"
      inkscape:label="Galaxy"
      style="display:inline"
-     transform="translate(0,-500)"
-     sodipodi:insensitive="true">
+     transform="translate(0,-500)">
     <g
        id="g127615"
-       transform="matrix(1.1919643,0,0,1.1919643,-89.519773,165.31921)"
+       transform="matrix(1.1919643,0,0,1.1919643,-91.519773,165.31921)"
        inkscape:export-filename="T:\Github\tcfraser.github.io\images\galaxy_main.png"
        inkscape:export-xdpi="36"
        inkscape:export-ydpi="36">
