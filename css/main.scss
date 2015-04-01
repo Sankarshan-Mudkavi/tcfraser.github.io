@@ -16,6 +16,7 @@ $theme-color-main: #07071d;
 $theme-color-alt: #2298f3;
 $side-bar-shadow-depth: 5px;
 $side-bar-shadow-color: rgba(0,0,0,0.7);
+$side-bar-size-desktop: 18rem;
 /* ------ */
 
 /* --- Mixins --- */
@@ -207,8 +208,14 @@ blockquote p:last-child {
 
 /* --- Container --- */
 
+.sidebar-aligner {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 .container {
-  max-width: 38rem;
+  max-width: $break-size-2;
   padding-left:  1rem;
   padding-right: 1rem;
   margin-left:  auto;
@@ -216,7 +223,34 @@ blockquote p:last-child {
 }
 /* ------ */
 
+/* --- Content --- */
+.content {
+  padding-top:    4rem;
+  padding-bottom: 4rem;
+}
+/* ------ */
 
+.content a {
+    color: $theme-color-alt;
+}
+
+@media (min-width: $break-size-2) {
+  .sidebar-aligner {
+    margin-left: $side-bar-size-desktop;
+  }
+
+  .content {
+    padding-left:  2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: $break-size-4) {
+  .content {
+    padding-left:  4rem;
+    padding-right: 4rem;
+  }
+}
 /* --- Side Bar --- */
 .sidebar {
   text-align: center;
@@ -235,7 +269,7 @@ blockquote p:last-child {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 18rem;
+    width: $side-bar-size-desktop;
     text-align: left;
     @include box-shadow($side-bar-shadow-depth, 0, $side-bar-shadow-depth*2, $side-bar-shadow-color);
   }
@@ -301,7 +335,7 @@ a.sidebar-nav-item:focus {
   font-weight: bold;
 }
 /* -- Sidebar Horizontal Nav -- */
-@media (max-width: $break-size-2) {
+@media not all and (min-width: $break-size-2) {
   .sidebar-nav-item {
     display: inline;
     padding: 0 1em;
@@ -320,11 +354,14 @@ a.sidebar-nav-item:focus {
 }
 
 /* -- Blog post or page title -- */
-.page-title,
-.post-title,
 .post-title a {
-  color: #303030;
+  color: $theme-color-alt;
 }
+
+.post.preview {
+  // border: solid;
+}
+
 .page-title,
 .post-title {
   margin-top: 0;
@@ -405,32 +442,6 @@ a.pagination-item:hover {
     margin-left: -1px;
     border-top-right-radius:    4px;
     border-bottom-right-radius: 4px;
-  }
-}
-/* ------ */
-
-/* --- Content --- */
-.content {
-  padding-top:    4rem;
-  padding-bottom: 4rem;
-}
-
-.content a {
-    color: $theme-color-alt;
-}
-
-@media (min-width: $break-size-2) {
-  .content {
-    max-width: 38rem;
-    margin-left: 20rem;
-    margin-right: 2rem;
-  }
-}
-
-@media (min-width: $break-size-4) {
-  .content {
-    margin-left: 22rem;
-    margin-right: 4rem;
   }
 }
 /* ------ */

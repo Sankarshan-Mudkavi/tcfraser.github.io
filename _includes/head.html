@@ -15,6 +15,19 @@
   <link rel="stylesheet" href="{{ site.baseurl }}css/syntax.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400' rel='stylesheet' type='text/css'>
 
+  {% if page.latex == "mathjax" %}
+  <!-- MathJax -->
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      }
+    });
+  </script>
+  {% endif %}
+
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}images/logo/site_icon_144x144.png">
                                  <link rel="shortcut icon" href="{{ site.baseurl }}images/logo/favicon.ico">
