@@ -21,12 +21,11 @@ paginate:         5
 github:
   repo:           https://github.com/tcfraser
 
+excerpt_separator: <!--more-->
+
 defaults:
     -
         scope:
             path: ""
-            type: "posts"
         values:
-            layout: "post"
-            latex: "mathjax"
-            excerpt_separator: "<!--more-->"
+            latex: mathjax

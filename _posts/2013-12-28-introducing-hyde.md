@@ -1,8 +1,13 @@
 ---
+layout: post
 title: Introducing Hyde
 ---
 
 Hello this is an excerpt!
+
+$$a + b = c$$
+
+af dsafd safdsa fdsa fdsaf ds
 
 <!--more-->
 
