@@ -25,9 +25,34 @@
         processEscapes: true
       },
       TeX: {
-        extensions: ["AMSmath.js", "AMSsymbols.js"]
+        extensions: ["AMSmath.js", "AMSsymbols.js"],
+        Macros: {
+          numberthis: "\\addtocounter{equation}{1}\\tag{\\theequation}",
+          ba: ["\\left< #1 \\right>",1],
+          bs: ["\\left[ #1 \\right]",1],
+          br: ["\\left( #1 \\right)",1],
+          bc: ["\\left\\{ #1 \\right\\}",1],
+          mtrx: ["\\begin{bmatrix} #1 & #2 \\\\ #3 & #4 \\end{bmatrix}",4],
+          twovec: ["\\begin{bmatrix} #1 \\\\ #2 \\end{bmatrix}",2],
+          f: ["\\frac{#1}{#2}",2],
+          intl: "\\int\\limits",
+          dif: "\\mathrm{d}",
+          dx: "\\dif x",
+          der: ["\\f{\\dif #1}{\\dif #2}", 2]
+        }
+      },
+      "HTML-CSS": {
+        linebreaks: { automatic: true, width: "content" }
       }
     });
+    MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+      MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+        cancel: ["Extension","cancel"],
+        bcancel: ["Extension","cancel"],
+        xcancel: ["Extension","cancel"],
+        cancelto: ["Extension","cancel"]
+    });
+});
   </script>
   {% endif %}
 
