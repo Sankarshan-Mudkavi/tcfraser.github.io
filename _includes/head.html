@@ -17,7 +17,6 @@
 
   {% if page.latex == "mathjax" %}
   <!-- MathJax -->
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       TeX: {
@@ -54,6 +53,8 @@
     });
 });
   </script>
+  <!-- MathJax Configuration needs to come before the loading of MathJax. Otherwise, there is a race condition for loading custom commands -->
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   {% endif %}
 
   <!-- Icons -->
