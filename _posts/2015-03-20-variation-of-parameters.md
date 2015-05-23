@@ -3,7 +3,7 @@ layout: post
 title: Variation of Parameters
 ---
 
-The method of [Variation of Parameters](http://mathworld.wolfram.com/VariationofParameters.html) is a very common technique use in solving the differential equation $y'' + P(x)y' + Q(x)y = R(x)$. It involves assuming that the particular solution $y_p(x)$ can be written in terms of functions of $x$ $v_1(x)$ and $v_2(x)$ to be determined such that $y_p(x) = v_1(x)y_1(x) + v_2(x)y_2(x)$. While investigating the consequences of this assumption, the term $v_1 y'_1 + v_2 y'_2$ is often set to equal $0$ for convienience. However, it turns out this expression can be anything at all.
+The method of [Variation of Parameters](http://mathworld.wolfram.com/VariationofParameters.html) is a very common technique use in solving the differential equation $y'' + P(x)y' + Q(x)y = R(x)$. It involves assuming that the particular solution such that $y_p(x) = v_1(x)y_1(x) + v_2(x)y_2(x)$. Where $v_1(x)$ and $v_2(x)$ are unknown functions to be determined. While investigating the consequences of this assumption, the emergent term $v_1 y'_1 + v_2 y'_2$ is often set to $0$ for convenience. However, it turns out this expression can be anything at all.
 
 <!--more-->
 
