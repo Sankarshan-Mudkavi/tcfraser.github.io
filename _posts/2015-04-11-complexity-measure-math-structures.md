@@ -193,9 +193,9 @@ The complexity metric suggested by Tegmark is just an example. You could constru
 My question is:
 
 <div class="message">
-  Does there exist and finite mathematical structure $\phi^*$ that has a relation capable of ranking every finite mathematical structure against each other in terms of complexity?
+  Does there exist and finite mathematical structure $\phi^*$ that has a relation capable of producing a complexity $H$ for every other finite mathematical structure? And if so, what is the complexity of this special structure $H(\phi^*)$?
 </div>
 
-Quite simply, it is simple to prove that there does not exist a finite mathematical structure that can generate a measurement of complexity of all finite mathematical structures because there are an infinite number of finite mathematical structures. This would be mean the set $S$ associated with $\phi^*$ would require a member for each unique complexity. However, it is still possible to have a relation that has two arguments encoding $c_1$ and encoding $c_2$, and returns the more complex encoding. This could be used to compare and rank all finite mathematical structures. However, for the same reason, this would enforce $S$ to be infinite and thus the mathematical structure $$\phi^*$$ does not exist.
+Quite simply, it is simple to prove that there does not exist a finite mathematical structure that can generate a measurement of complexity of all finite mathematical structures because there are an infinite number of finite mathematical structures. This would be mean the set $S$ associated with $\phi^*$ would require a member for each unique complexity. However, it is still possible to have a relation that has two arguments encoding $c_1$ and encoding $c_2$, and returns the more complex encoding. This could be used to compare and rank all finite mathematical structures. However, for the same reason, this would enforce $S$ to be infinite and thus the mathematical structure $$\phi^*$$ does not exist. Bummer.
 
 Nonetheless, this might still be possible for infinite mathematical structures. I do not know at the moment.
