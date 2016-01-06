@@ -101,7 +101,7 @@ Letting $a$ and $b$ be elements of $S$, the relations $C_3$ can be reduced as fo
 \\begin{align}
 e = R_1 &= R(a,a) \\\
 a^{-1} = R_2 &= R(R(a,a),a) \\\
-ab = R_3 &= R(a, R(R(b,b),b),b))
+ab = R_3 &= R(a, R(R(b,b),b))
 \\end{align}
 
 ## Encoding Mathematical Structures
