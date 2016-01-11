@@ -187,6 +187,10 @@ span.hide-email {
     @include hide-email();
 }
 
+div.mathjax-macros {
+    display: none;
+}
+
 /* -- Quotes -- */
 blockquote {
     padding: .5rem 1rem;

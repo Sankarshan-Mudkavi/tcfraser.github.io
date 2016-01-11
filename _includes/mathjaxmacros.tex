@@ -1,0 +1,61 @@
+\newcommand{\del}{\nabla} % nabla alias
+\newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}} % partial derivative
+\newcommand{\pderk}[3]{\frac{\partial^{#1} #2}{\partial #3^{#1}}} % partial derivative
+\newcommand{\pdder}[2]{\frac{\partial^2 #1}{\partial #2^2}} % partial double derivative
+\newcommand{\der}[2]{\frac{\dif #1}{\dif #2}} % derivative
+\newcommand{\derk}[3]{\frac{\dif^{#1} #2}{\dif #3^{#1}}} % derivative
+\newcommand{\dder}[2]{\frac{\dif^2 #1}{\dif #2^2}} % double derivative
+
+% Differentials
+\newcommand{\dif}{\mathrm{d}} % differential
+\newcommand{\dx}{\dif x}
+\newcommand{\dy}{\dif y}
+\newcommand{\dz}{\dif z}
+\newcommand{\dt}{\dif t}
+\newcommand{\ddt}{\der{}{t}}
+\newcommand{\dphi}{\dif \phi}
+\newcommand{\dtheta}{\dif \theta}
+\newcommand{\drho}{\dif \rho}
+\newcommand{\ds}{\dif s}
+
+% Integrals
+\newcommand{\intl}{\int\limits} % integral with limits alias
+\newcommand{\ointl}{\oint\limits} % integral with limits alias
+\newcommand{\iintl}{\iint\limits} % integral with limits alias
+\newcommand{\oiintl}{\oiint\limits} % integral with limits alias
+\newcommand{\iiintl}{\iiint\limits} % integral with limits alias
+\newcommand{\oiiintl}{\oiiint\limits} % integral with limits alias
+
+\newcommand{\f}[2]{\frac{#1}{#2}} % fraction shorthand
+
+% Brackets
+\newcommand{\ba}[1]{\left< #1 \right>} % brackets square
+\newcommand{\bs}[1]{\left[ #1 \right]} % brackets square
+\newcommand{\br}[1]{\left( #1 \right)} % brackets round
+\newcommand{\bc}[1]{\left\{ #1 \right\}} % brackets curly
+\newcommand{\bre}[1]{\left(#1\right\rvert} % evaluated at brackets
+\newcommand{\bse}[1]{\left[#1\right\rvert} % evaluated at brackets
+\newcommand{\abs}[1]{\left| #1 \right|} % brackets absolute value
+
+% 2x2 Matrix
+\newcommand{\mtrx}[4]{
+    \begin{bmatrix}
+    #1 & #2 \\
+    #3 & #4
+    \end{bmatrix}
+}
+
+% Block vector or matrix
+\newcommand{\nmtrx}[1]{
+    \begin{bmatrix}
+    #1
+    \end{bmatrix}
+}
+
+% 2 Column Vector
+\newcommand{\twovec}[2]{
+    \begin{bmatrix}
+    #1 \\
+    #2
+    \end{bmatrix}
+}

@@ -15,27 +15,13 @@
     <link rel="stylesheet" href="{{ site.baseurl }}css/syntax.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400' rel='stylesheet' type='text/css'>
 
-    {% if page.latex == "mathjax" %}
+    {% if page.latex == "mathjax" or page.latex == "mathjax-autonumber" %}
     <!-- MathJax -->
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
             TeX: {
-                extensions: ["AMSmath.js", "AMSsymbols.js"],
-                Macros: {
-                    numberthis: "\\addtocounter{equation}{1}\\tag{\\theequation}",
-                    ba: ["\\left< #1 \\right>",1],
-                    bs: ["\\left[ #1 \\right]",1],
-                    br: ["\\left( #1 \\right)",1],
-                    bc: ["\\left\\{ #1 \\right\\}",1],
-                    mtrx: ["\\begin{bmatrix} #1 & #2 \\\\ #3 & #4 \\end{bmatrix}",4],
-                    twovec: ["\\begin{bmatrix} #1 \\\\ #2 \\end{bmatrix}",2],
-                    nmtrx: ["\\begin{bmatrix} #1 \\end{bmatrix}",1],
-                    f: ["\\frac{#1}{#2}",2],
-                    intl: "\\int\\limits",
-                    dif: "\\mathrm{d}",
-                    dx: "\\dif x",
-                    der: ["\\f{\\dif #1}{\\dif #2}", 2]
-                }
+                {% if page.latex == "mathjax-autonumber" %}equationNumbers: { autoNumber: "AMS" },{% endif %}
+                extensions: ["AMSmath.js", "AMSsymbols.js"]
             },
             tex2jax: {
                 inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -55,7 +41,7 @@
 });
     </script>
     <!-- MathJax Configuration needs to come before the loading of MathJax. Otherwise, there is a race condition for loading custom commands -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     {% endif %}
 
     <!-- Icons -->
