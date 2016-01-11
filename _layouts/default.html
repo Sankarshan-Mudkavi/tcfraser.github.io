@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  {% include head.html %}
+    {% include head.html %}
+    <div class="mathjax-macros">
+    $
+    {% include mathjaxmacros.tex %}
+    $
+    </div>
 
-  <body>
+    <body>
 
     {% include sidebar.html %}
 
     <div class="sidebar-aligner">
         <div class="content container">
-          {{ content }}
+            {{ content }}
         </div>
     </div>
 
-  </body>
+    </body>
 </html>
